@@ -1,0 +1,340 @@
+@import url('http://fonts.cdnfonts.com/css/euclid-circular-a');
+
+@import "variables";
+.navbar{
+    background: #010B1C;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0px 6px 14px rgba(21, 30, 56, 0.05);
+    border-radius: 0px;
+    &-nav{
+        .nav-link{
+            color: $color-secondary-light !important;
+            margin-left: 1rem;
+            @include respond(standardphone){
+                margin-top: .5rem;
+                margin-left: 0;
+            }
+        }
+        .button {
+            background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
+            box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+            border-radius: 52px;
+            color: $color-primary;
+            width: fit-content;
+        }
+    }
+    
+}
+.main-header{
+    background: url('/images/BG-Blur/web/banner_bg_blur.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond(standardphone){
+        background: url('/images/BG-Blur/Mobile/Vector-1.png');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h1{
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 95px;
+
+        @include respond(standardphone){
+            font-size: 3rem;
+            line-height: 1.25;
+            img{
+                width: 45px;
+            }
+        }
+
+    }
+    &-cta{
+        a{
+            background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
+            box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+            border-radius: 52px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            color: $color-primary;
+            border: 1px solid transparent;
+            &:hover{
+                color: $color-primary;
+                border-color: $color-primary;
+                
+            }
+        }
+        &-upwork-banner{
+            img{
+                max-width: 140px;
+            }
+        }
+    }
+    &-card{
+        width: 255;
+        height: 255px;
+        margin: auto;
+        background: $bg-primary-gradient;
+        box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(21px);
+        border-radius: $border-radius;
+        display: grid;
+        place-content: center;
+    }
+
+}
+
+.main-services{
+    background: url('/images/BG-Blur/web/our_services_bg_blur.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @include respond(standardphone) {
+        background: url('/images/BG-Blur/Mobile/Vector-2.png');
+        background-position: top;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    &-card{
+        background: $bg-primary-gradient;
+        box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(21px);
+        border-radius: $border-radius
+    }
+}
+
+.main-companies{
+    background: url('/images/BG-Blur/web/we_work_with_bg_blur.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond(standardphone) {
+        background: url('/images/BG-Blur/Mobile/Vector-3.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    img{
+        text-align: center;
+        // height: 60px;
+        width: 140px;
+        margin: auto;
+    }
+
+}
+
+
+.main-reasons-chose{
+    background: url('/images/BG-Blur/web/why_choose_bg_blur.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond(standardphone) {
+        background: url('/images/BG-Blur/Mobile/Vector-5.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    .main-resons-card{
+        background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+        box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(21px);
+        border-radius: 18px;
+
+        .d-flex{
+            @include respond(tab-port){
+                flex-wrap: wrap;
+            }
+        }
+
+        .icon-bg{
+            height: 60px;
+            width: 60px;
+            background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+            box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(21px);
+            border-radius: 8px;
+            display: grid;
+            place-content: center;
+            img{
+                width: 40px;
+            }
+        }
+    }
+}
+
+.main-testimonial{
+    #main-testimonial-carousell{
+
+    }
+}
+
+.main-faq{
+
+  
+    &-collapse{
+        &-header{
+            padding: 1.4rem 1.2rem;
+            background: linear-gradient(169.15deg, rgba(255, 255, 255, 0.12) 0%, rgba(238, 237, 237, 0.0288) 96.79%);
+            border-radius: 10px 10px 0px 0px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            cursor: pointer;
+        }
+        &-body{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            /* card-shadow */
+        
+            box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(21px);
+            /* Note: backdrop-filter has minimal browser support */
+        
+            border-radius: 0 0 10px 10px;
+            .card{
+                background:transparent;
+                p{
+                    line-height: 30px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.main-request-demo{
+    background: url('/images/BG-Blur/web/quote_bg_blur.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond(standardphone) {
+        background: url('/images/BG-Blur/Mobile/Vector-6.png');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h1{
+        
+    }
+    &-icon{
+        background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        ;
+        /* card-shadow */
+    
+        box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(21px);
+        /* Note: backdrop-filter has minimal browser support */
+    
+        border-radius: 14px;
+        height: 65px;
+        width: 65px;
+        display: grid;
+        place-content: center;
+    }
+}
+
+.form-group{
+    label{
+        margin-bottom: .75rem;
+        color: $color-secondary;
+        font-size: 1rem;
+    }
+    input, textarea{
+        border: 1px solid #2A3546;
+        border-radius: 7px;
+        background: transparent;
+        color: $color-primary;
+        &:focus{
+            background: transparent;
+            box-shadow: none;
+            border-color: $color-primary;  
+        }
+    }
+    a{
+        background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
+        box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+        border-radius: 52px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: $color-primary;
+        border: 1px solid transparent;
+        width: 100%;
+        &:hover {
+            color: $color-primary;
+            border-color: $color-primary;
+    
+        }
+    }
+
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #404A5C;
+        opacity: 1;
+        font-size: 1rem;
+        /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #404A5C;
+        font-size: 1rem;
+    }
+
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #404A5C;
+        font-size: 1rem;
+    }
+}
+
+footer{
+    background: url('/images/BG-Blur/web/footer_bg_blur.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond(standardphone) {
+        background: url('/images/BG-Blur/Mobile/Vector-6.png');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    img{
+        width: 300px;
+        @include respond(standardphone) {
+            max-width: 250px;
+        }
+    }
+    .social-icons{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            margin:  auto .75rem;
+            font-size: 1.5rem;
+            color: #747D8C;
+        }
+    }
+    .bottom{
+        background: rgba(1, 7, 18, 0.59);
+        backdrop-filter: blur(16.5px);
+    }
+}

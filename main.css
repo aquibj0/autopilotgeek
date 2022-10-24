@@ -1,0 +1,496 @@
+@import url("http://fonts.cdnfonts.com/css/euclid-circular-a");
+/*
+
+0 - 350px;         Small Phone
+350 - 600px;       Phone
+600 - 900px;       Table potrait
+900 - 1200px;      Table landscape
+1200 - 1800px ( is where the normal style is applies )
+1200 - 1800+ px;   Big desktop
+
+$breakpoint arguement choices :
+
+- sm-phone
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ ORDER: Base + Typography > genarel layout + grid > page layout > components
+
+*/
+/* ============================================ */
+/* ================ Global Variables  ================ */
+/* ============================================ */
+/* ============================================ */
+/* ================ Global Styles  ================ */
+/* ============================================ */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* ============================================ */
+/* ================ body customization ================ */
+/* ============================================ */
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #010B1C;
+  color: #ffffff;
+}
+
+body a {
+  text-decoration: none;
+  color: unset;
+}
+
+body button,
+body button:focus {
+  outline: none;
+}
+
+html, body {
+  font-family: 'Euclid Circular A', sans-serif;
+  font-size: 16px;
+}
+
+.text-gradient {
+  background: linear-gradient(90.07deg, #B3F1FF 16.05%, #E1FFBB 84.11%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.section-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 63px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.text-basic {
+  color: #747D8C;
+}
+
+.text-basic-light {
+  color: #C3CDE0;
+}
+
+.text-light {
+  color: #909AAD !important;
+}
+
+.primary-bg {
+  background: rgba(1, 7, 18, 0.59);
+  -webkit-backdrop-filter: blur(16.5px);
+          backdrop-filter: blur(16.5px);
+  border-radius: 30px;
+}
+
+a {
+  font-weight: 500;
+}
+
+.navbar {
+  background: #010B1C;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  -webkit-box-shadow: 0px 6px 14px rgba(21, 30, 56, 0.05);
+          box-shadow: 0px 6px 14px rgba(21, 30, 56, 0.05);
+  border-radius: 0px;
+}
+
+.navbar-nav .nav-link {
+  color: #C3CDE0 !important;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin-top: .5rem;
+    margin-left: 0;
+  }
+}
+
+.navbar-nav .button {
+  background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
+  -webkit-box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+          box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+  border-radius: 52px;
+  color: #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main-header {
+  background: url("/images/BG-Blur/web/banner_bg_blur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-header {
+    background: url("/images/BG-Blur/Mobile/Vector-1.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-header h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 95px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-header h1 {
+    font-size: 3rem;
+    line-height: 1.25;
+  }
+  .main-header h1 img {
+    width: 45px;
+  }
+}
+
+.main-header-cta a {
+  background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
+  -webkit-box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+          box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+  border-radius: 52px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.main-header-cta a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.main-header-cta-upwork-banner img {
+  max-width: 140px;
+}
+
+.main-header-card {
+  width: 255;
+  height: 255px;
+  margin: auto;
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+          box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(21px);
+          backdrop-filter: blur(21px);
+  border-radius: 18px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.main-services {
+  background: url("/images/BG-Blur/web/our_services_bg_blur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-services {
+    background: url("/images/BG-Blur/Mobile/Vector-2.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+}
+
+.main-services-card {
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+          box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(21px);
+          backdrop-filter: blur(21px);
+  border-radius: 18px;
+}
+
+.main-companies {
+  background: url("/images/BG-Blur/web/we_work_with_bg_blur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-companies {
+    background: url("/images/BG-Blur/Mobile/Vector-3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+}
+
+.main-companies img {
+  text-align: center;
+  width: 140px;
+  margin: auto;
+}
+
+.main-reasons-chose {
+  background: url("/images/BG-Blur/web/why_choose_bg_blur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-reasons-chose {
+    background: url("/images/BG-Blur/Mobile/Vector-5.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+}
+
+.main-reasons-chose .main-resons-card {
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+          box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(21px);
+          backdrop-filter: blur(21px);
+  border-radius: 18px;
+}
+
+@media only screen and (max-width: 900px) {
+  .main-reasons-chose .main-resons-card .d-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.main-reasons-chose .main-resons-card .icon-bg {
+  height: 60px;
+  width: 60px;
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+          box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(21px);
+          backdrop-filter: blur(21px);
+  border-radius: 8px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.main-reasons-chose .main-resons-card .icon-bg img {
+  width: 40px;
+}
+
+.main-faq-collapse-header {
+  padding: 1.4rem 1.2rem;
+  background: linear-gradient(169.15deg, rgba(255, 255, 255, 0.12) 0%, rgba(238, 237, 237, 0.0288) 96.79%);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.main-faq-collapse-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  /* card-shadow */
+  -webkit-box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+          box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(21px);
+          backdrop-filter: blur(21px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 0 0 10px 10px;
+}
+
+.main-faq-collapse-body .card {
+  background: transparent;
+}
+
+.main-faq-collapse-body .card p {
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.main-request-demo {
+  background: url("/images/BG-Blur/web/quote_bg_blur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-request-demo {
+    background: url("/images/BG-Blur/Mobile/Vector-6.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-request-demo-icon {
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+  /* card-shadow */
+  -webkit-box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+          box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(21px);
+          backdrop-filter: blur(21px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 14px;
+  height: 65px;
+  width: 65px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.form-group label {
+  margin-bottom: .75rem;
+  color: #747D8C;
+  font-size: 1rem;
+}
+
+.form-group input, .form-group textarea {
+  border: 1px solid #2A3546;
+  border-radius: 7px;
+  background: transparent;
+  color: #ffffff;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #ffffff;
+}
+
+.form-group a {
+  background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
+  -webkit-box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+          box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+  border-radius: 52px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.form-group a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.form-group ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #404A5C;
+  opacity: 1;
+  font-size: 1rem;
+  /* Firefox */
+}
+
+.form-group :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #404A5C;
+  opacity: 1;
+  font-size: 1rem;
+  /* Firefox */
+}
+
+.form-group ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #404A5C;
+  opacity: 1;
+  font-size: 1rem;
+  /* Firefox */
+}
+
+.form-group ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #404A5C;
+  opacity: 1;
+  font-size: 1rem;
+  /* Firefox */
+}
+
+.form-group :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #404A5C;
+  font-size: 1rem;
+}
+
+.form-group ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #404A5C;
+  font-size: 1rem;
+}
+
+footer {
+  background: url("/images/BG-Blur/web/footer_bg_blur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    background: url("/images/BG-Blur/Mobile/Vector-6.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+footer img {
+  width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  footer img {
+    max-width: 250px;
+  }
+}
+
+footer .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social-icons a {
+  margin: auto .75rem;
+  font-size: 1.5rem;
+  color: #747D8C;
+}
+
+footer .bottom {
+  background: rgba(1, 7, 18, 0.59);
+  -webkit-backdrop-filter: blur(16.5px);
+          backdrop-filter: blur(16.5px);
+}
+/*# sourceMappingURL=main.css.map */
