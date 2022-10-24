@@ -76,6 +76,12 @@ html, body {
   color: #FFFFFF;
 }
 
+@media only screen and (max-width: 768px) {
+  .section-heading {
+    font-size: 42px;
+  }
+}
+
 .text-basic {
   color: #747D8C;
 }
@@ -110,6 +116,11 @@ a {
 .navbar-nav .nav-link {
   color: #C3CDE0 !important;
   margin-left: 1rem;
+  font-weight: 50;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -128,6 +139,12 @@ a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: #ffffff !important;
+  border: 1px solid transparent;
+}
+
+.navbar-nav .button:hover {
+  border-color: #ffffff;
 }
 
 .main-header {
@@ -183,6 +200,13 @@ a {
   max-width: 140px;
 }
 
+@media only screen and (max-width: 768px) {
+  .main-header-cta-upwork-banner img {
+    width: 119px;
+    margin-bottom: 1.75rem !important;
+  }
+}
+
 .main-header-card {
   width: 255;
   height: 255px;
@@ -196,6 +220,22 @@ a {
   display: -ms-grid;
   display: grid;
   place-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-header-card {
+    width: 176;
+    height: 185px;
+  }
+  .main-header-card .top img {
+    width: 38px;
+  }
+  .main-header-card .top h2 {
+    font-size: 1.5rem;
+  }
+  .main-header-card .top p {
+    font-size: .85rem;
+  }
 }
 
 .main-services {
@@ -223,6 +263,53 @@ a {
   border-radius: 18px;
 }
 
+@media only screen and (max-width: 768px) {
+  .main-services-card .card-body {
+    padding: .75rem !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-projects .order-2nd {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.main-projects a {
+  text-decoration: underline !important;
+  font-weight: 600;
+}
+
+.main-projects .img-right {
+  text-align: right;
+}
+
+.main-projects .img-right img {
+  width: 95%;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-projects .img-right img {
+    width: 100%;
+  }
+}
+
+.main-projects .img-left {
+  text-align: left;
+}
+
+.main-projects .img-left img {
+  width: 95%;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-projects .img-left img {
+    width: 100%;
+  }
+}
+
 .main-companies {
   background: url("/images/BG-Blur/web/we_work_with_bg_blur.png");
   background-position: center;
@@ -241,8 +328,48 @@ a {
 
 .main-companies img {
   text-align: center;
-  width: 140px;
+  width: 125px;
   margin: auto;
+}
+
+.main-companies-4-web {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-companies-4-web {
+    display: none;
+  }
+}
+
+.main-companies-4-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-companies-4-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-companies-4-mobile .col-6 .card {
+    min-height: 75px;
+    background: linear-gradient(169.15deg, rgba(255, 255, 255, 0.12) 0%, rgba(238, 237, 237, 0.0288) 96.79%);
+    border-radius: 10px;
+  }
+  .main-companies-4-mobile .col-6 .card img {
+    width: 100px;
+  }
+  .main-companies-4-mobile .col-6 .card .card-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .main-reasons-chose {
@@ -451,7 +578,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
   footer {
-    background: url("/images/BG-Blur/Mobile/Vector-6.png");
+    background: url("/images/BG-Blur/Mobile/Vector-11.png");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;

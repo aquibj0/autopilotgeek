@@ -10,6 +10,11 @@
         .nav-link{
             color: $color-secondary-light !important;
             margin-left: 1rem;
+           
+            font-weight: 50;
+            &:hover{
+                color: $color-primary !important;
+            }
             @include respond(standardphone){
                 margin-top: .5rem;
                 margin-left: 0;
@@ -21,6 +26,11 @@
             border-radius: 52px;
             color: $color-primary;
             width: fit-content;
+            color: $color-primary !important;
+            border: 1px solid transparent;
+            &:hover{
+                border-color: $color-primary ;
+            }
         }
     }
     
@@ -70,6 +80,10 @@
         &-upwork-banner{
             img{
                 max-width: 140px;
+                @include respond(standardphone){
+                    width: 119px;
+                    margin-bottom: 1.75rem !important
+                }
             }
         }
     }
@@ -83,6 +97,23 @@
         border-radius: $border-radius;
         display: grid;
         place-content: center;
+
+        @include respond(standardphone){
+            width: 176;
+            height: 185px;
+            .top{
+                img{
+                    width: 38px;
+                }
+                h2{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: .85rem;
+                }
+            }
+        }
+        
     }
 
 }
@@ -104,7 +135,46 @@
         background: $bg-primary-gradient;
         box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
         backdrop-filter: blur(21px);
-        border-radius: $border-radius
+        border-radius: $border-radius;
+
+        @include respond(standardphone) {
+            .card-body{
+                padding: .75rem !important;
+            }
+        }
+    }
+}
+
+.main-projects{
+    .order-2nd {
+        @include respond(standardphone) {
+            order: 2;
+            // margin-top: 1.25rem;
+        }
+    }
+    a{
+        text-decoration: underline !important;
+        font-weight: 600;
+    }
+    .img-right{
+        text-align: right;
+        img{
+            width: 95%;
+            @include respond(standardphone) {
+                width: 100%;
+            }
+        }
+    }
+
+    .img-left{
+        text-align: left;
+        
+            img {
+                width: 95%;
+                @include respond(standardphone) {
+                    width: 100%;
+                }
+            }
     }
 }
 
@@ -123,11 +193,37 @@
 
     img{
         text-align: center;
-        // height: 60px;
-        width: 140px;
+        width: 125px;
         margin: auto;
     }
 
+    &-4-web{
+        display: flex;
+        @include respond(standardphone) {
+            display: none;
+        }
+    }
+    &-4-mobile{
+        display: none;
+        @include respond(standardphone){
+            display: flex;
+            .col-6{
+                .card{
+                    min-height: 75px;
+                    
+                    background: linear-gradient(169.15deg, rgba(255, 255, 255, 0.12) 0%, rgba(238, 237, 237, 0.0288) 96.79%);
+                    border-radius: 10px;
+                    img{width: 100px;}
+                    .card-body{
+                        display: flex;
+                            align-items: center;
+                    }
+                    
+                }
+                
+            }
+        }
+    }
 }
 
 
@@ -310,7 +406,7 @@ footer{
     background-repeat: no-repeat;
 
     @include respond(standardphone) {
-        background: url('/images/BG-Blur/Mobile/Vector-6.png');
+        background: url('/images/BG-Blur/Mobile/Vector-11.png');
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
