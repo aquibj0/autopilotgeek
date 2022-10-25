@@ -116,7 +116,7 @@ a {
 .navbar-nav .nav-link {
   color: #C3CDE0 !important;
   margin-left: 1rem;
-  font-weight: 50;
+  font-weight: 500;
 }
 
 .navbar-nav .nav-link:hover {
@@ -186,6 +186,7 @@ a {
   border-radius: 52px;
   font-weight: 500;
   font-size: 18px;
+  padding: .8rem 0;
   line-height: 23px;
   color: #ffffff;
   border: 1px solid transparent;
@@ -507,7 +508,7 @@ a {
   border-color: #ffffff;
 }
 
-.form-group a {
+.form-group button {
   background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
   -webkit-box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
           box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
@@ -518,9 +519,10 @@ a {
   color: #ffffff;
   border: 1px solid transparent;
   width: 100%;
+  padding: .8rem 0;
 }
 
-.form-group a:hover {
+.form-group button:hover {
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -619,5 +621,29 @@ footer .bottom {
   background: rgba(1, 7, 18, 0.59);
   -webkit-backdrop-filter: blur(16.5px);
           backdrop-filter: blur(16.5px);
+}
+
+@media only screen and (max-width: 768px) {
+  footer .nav-icons .d-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+footer .nav-icons a {
+  color: #C3CDE0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+@media only screen and (max-width: 768px) {
+  footer .nav-icons a {
+    margin-bottom: 1rem;
+  }
+}
+
+footer .nav-icons a:hover {
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

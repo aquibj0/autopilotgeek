@@ -11,7 +11,7 @@
             color: $color-secondary-light !important;
             margin-left: 1rem;
            
-            font-weight: 50;
+            font-weight: 500;
             &:hover{
                 color: $color-primary !important;
             }
@@ -68,6 +68,7 @@
             border-radius: 52px;
             font-weight: 500;
             font-size: 18px;
+            padding: .8rem 0;;
             line-height: 23px;
             color: $color-primary;
             border: 1px solid transparent;
@@ -361,7 +362,7 @@
             border-color: $color-primary;  
         }
     }
-    a{
+    button{
         background: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 99.4%);
         box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
         border-radius: 52px;
@@ -371,6 +372,7 @@
         color: $color-primary;
         border: 1px solid transparent;
         width: 100%;
+        padding: .8rem 0;
         &:hover {
             color: $color-primary;
             border-color: $color-primary;
@@ -432,5 +434,25 @@ footer{
     .bottom{
         background: rgba(1, 7, 18, 0.59);
         backdrop-filter: blur(16.5px);
+    }
+
+    .nav-icons{
+        .d-flex{
+            @include respond(standardphone){
+                flex-wrap: wrap;
+            }
+        }
+        a{
+            color: #C3CDE0;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            @include respond(standardphone) {
+                margin-bottom: 1rem;
+            }
+            &:hover{
+                color: $color-primary;
+            }
+        }
     }
 }

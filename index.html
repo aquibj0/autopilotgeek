@@ -49,9 +49,9 @@
                 <div class="navbar-nav bg-screen-menu justify-content-center" style="margin: auto 0 auto auto !important;">
                     <a class="nav-link active" aria-current="page" href="#services">Services</a>
                     <a class="nav-link" href="#projects">Projects</a>
-                    <a class="nav-link" href="#faqs">FAQs</a>
                     <a class="nav-link" href="#why-us">Why us</a>
                     <a class="nav-link" href="#testimonials">Testimonials</a>
+                    <a class="nav-link" href="#faqs">FAQs</a>
                     <a class="nav-link button px-4" href="#contact">Contact us</a>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 <div class="col-md-8 text-center">
                     <h1 class="my-4">We solve <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/high-voltage_26a1.png" width="74" alt=""> your <span class="text-gradient">problems by creating</span> digital products</h1>
                     <div class="main-header-cta py-4">
-                        <a href="#" class="my-2 py-3 btn btn-lg px-5">Explore our work</a>
+                        <a href="#" class="my-2 btn btn-lg px-5">Explore our work</a>
                         <div class="main-header-cta-upwork-banner pt-3 my-4">
                             <img src="/images/upwork_top-rated_badge.png" class="mb-3"  alt="">
                             <p class="mb-0 pb-2 text-basic">Top Rated PLUS Agency on Upwork</p>
@@ -128,7 +128,7 @@
         </div>
     </header>
 
-    <section class="main-services">
+    <section class="main-services" id="services">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-11 primary-bg py-5">
@@ -284,7 +284,7 @@
         </div>
     </section>  
 
-    <section class="main-projects">
+    <section class="main-projects" id="projects">
         <div class="py-5">
             <div class="text-center my-4 pt-2 pb-3">
                 <div class="container">
@@ -468,7 +468,7 @@
     </section>
 
 
-    <section class="main-reasons-chose">
+    <section class="main-reasons-chose" id="why-us">
         <div class="py-5">
             <div class="text-center my-4 pt-2 pb-5">
                 <div class="container">
@@ -558,7 +558,7 @@
     </section>
 
 
-    <section class="main-testimonial">
+    <section class="main-testimonial" id="testimonials">
         <div class="container-fluid">
             <div class="row justify-content-center py-5">
                 <div class="col-md-11 primary-bg py-5">
@@ -596,7 +596,7 @@
 
 
 
-    <section class="main-faq">
+    <section class="main-faq" id="faqs">
         <div class="py-5">
             <div class="text-center my-4 pt-2 pb-5">
                 <div class="container">
@@ -809,7 +809,7 @@
     </section>
 
 
-    <section class="main-request-demo">
+    <section class="main-request-demo" id="contact">
         <div class="container-fluid">
             <div class="row justify-content-center py-5">
                 <div class="col-md-11 primary-bg py-5">
@@ -817,7 +817,7 @@
 
                    
                         <div class="row">
-                            <div class="col-md-6 text-left" style="text-align:left">
+                            <div class="col-md-6 mb-5 text-left" style="text-align:left">
                                 <h1 class="section-heading pt-2 pb-4" style="text-align:left;line-height: 65px;">
                                     Got A Project
                                     Or A Partnership
@@ -849,25 +849,25 @@
                                     <div class="form-group mb-4 row">
                                         <div class="col-md-6">
                                             <label for="full_name">Full Name</label>
-                                            <input type="text" name="full_name" class="form-control form-control-lg" id="" placeholder="Enter your full name">
+                                            <input type="text" name="full_name" class="form-control form-control-lg" id="" placeholder="Enter your full name" required>
                                         </div>
 
                                         <div class="col-md-6">
                                             <label for="phone_number">Phone Number</label>
-                                            <input type="text" name="phone_number" class="form-control form-control-lg" id="" placeholder="Enter your phone number">
+                                            <input type="text" name="phone_number" class="form-control form-control-lg" id="" placeholder="Enter your phone number" required>
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
                                         <label for="full_name">Email Address</label>
-                                        <input type="text" name="full_name" class="form-control form-control-lg" id="" placeholder="Enter your email address">
+                                        <input type="text" name="full_name" class="form-control form-control-lg" id="" placeholder="Enter your email address" required>
                                     </div>
 
                                     <div class="form-group mb-4">
                                         <label for="message">Your Message</label>
-                                        <textarea name="message" id=""  cols="30" rows="3" class="form-control form-control-lg" rows="" placeholder="Tell us about your project"></textarea>
+                                        <textarea name="message" id=""  cols="30" rows="3" class="form-control form-control-lg" rows="" placeholder="Tell us about your project" required></textarea>
                                     </div>
                                     <div class="form-group mb-4">
-                                        <a href="#" class="my-2 py-3 btn btn-lg px-5 btn-block">Explore our work</a>
+                                        <button type="submit" class="my-2 btn btn-lg px-5 btn-block">Explore our work</button>
                                     </div>
                                 </form>
                             </div>
@@ -887,6 +887,16 @@
                         <a href="/">
                             <img src="/images/brand_logo.svg" alt="">
                         </a>
+                    </div>
+
+                    <div class="nav-icons mb-4 pb-4">
+                        <div class="d-flex justify-content-center">
+                            <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                            <a class="nav-link" href="#projects">Projects</a>
+                            <a class="nav-link" href="#why-us">Why us</a>
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                            <a class="nav-link" href="#faqs">FAQs</a>
+                        </div>
                     </div>
 
                     <div class="social-icons mb-5">
