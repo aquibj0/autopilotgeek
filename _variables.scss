@@ -13,7 +13,7 @@
     backdrop-filter: blur(21px);
     -webkit-backdrop-filter: blur(21px);
     border-radius: 18px;
-    border: none !important;
+    border: .5px solid rgba(255, 255, 255, 0.12);
 }
 
 @mixin cta-btn {

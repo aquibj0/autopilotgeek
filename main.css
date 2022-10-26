@@ -541,7 +541,7 @@ a {
   backdrop-filter: blur(21px);
   -webkit-backdrop-filter: blur(21px);
   border-radius: 18px;
-  border: none !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
   display: grid;
   place-content: center;
 }
@@ -653,7 +653,7 @@ a {
   backdrop-filter: blur(21px);
   -webkit-backdrop-filter: blur(21px);
   border-radius: 18px;
-  border: none !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
 }
 @media only screen and (max-width: 768px) {
   .main-services-card .card-body {
@@ -878,7 +878,7 @@ a {
   backdrop-filter: blur(21px);
   -webkit-backdrop-filter: blur(21px);
   border-radius: 18px;
-  border: none !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
 }
 @media only screen and (max-width: 768px) {
   .main-reasons-chose .main-resons-card {
@@ -903,7 +903,7 @@ a {
   backdrop-filter: blur(21px);
   -webkit-backdrop-filter: blur(21px);
   border-radius: 18px;
-  border: none !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   display: grid;
   place-content: center;
@@ -1189,7 +1189,7 @@ a {
   backdrop-filter: blur(21px);
   -webkit-backdrop-filter: blur(21px);
   border-radius: 18px;
-  border: none !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
   height: 65px;
   width: 65px;
