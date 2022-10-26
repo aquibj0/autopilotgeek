@@ -715,10 +715,12 @@ a {
 }
 .main-projects .img-right img {
   width: 95%;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 768px) {
   .main-projects .img-right img {
     width: 100%;
+    border-radius: 6px;
   }
 }
 .main-projects .img-left {
@@ -726,10 +728,12 @@ a {
 }
 .main-projects .img-left img {
   width: 95%;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 768px) {
   .main-projects .img-left img {
     width: 100%;
+    border-radius: 6px;
   }
 }
 .main-projects .cta-btn {

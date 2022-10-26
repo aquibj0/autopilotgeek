@@ -420,9 +420,11 @@
 
         img {
             width: 95%;
+            border-radius: 10px;
 
             @include respond(standardphone) {
                 width: 100%;
+                border-radius: 6px;
             }
         }
     }
@@ -432,9 +434,11 @@
 
         img {
             width: 95%;
+            border-radius: 10px;
 
             @include respond(standardphone) {
                 width: 100%;
+                border-radius: 6px;
             }
         }
     }
