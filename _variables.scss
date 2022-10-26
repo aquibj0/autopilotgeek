@@ -30,6 +30,20 @@
     }
 }
 
+@mixin bg-adjusted {
+    @include respond(big-desktop) {
+        display: none;
+    }
+
+    @include respond(tab-land) {
+        display: none;
+    }
+
+    @include respond(phone) {
+        display: block;
+    }
+}
+
 @mixin bg-blur {
     position: relative;
     z-index: 3;
@@ -274,21 +288,41 @@ a {
 // Animation Floating
 
 @keyframes float_1 {
-  0%   {transform: translateY(10px) rotate3d(-15.78deg);}
-  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
+    0% {
+        transform: translateY(10px) rotate3d(-15.78deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);
+    }
 }
 
 @keyframes float_2 {
-  0%   {transform: translateY(10px) rotate3d(24.79deg);}
-  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
+    0% {
+        transform: translateY(10px) rotate3d(24.79deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);
+    }
 }
 
 @keyframes float_3 {
-  0%   {transform: translateY(10px) rotate3d(-9.68deg);}
-  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
+    0% {
+        transform: translateY(10px) rotate3d(-9.68deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);
+    }
 }
 
 @keyframes float_4 {
-  0%   {transform: translateY(10px) rotate3d(9.68deg);}
-  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
+    0% {
+        transform: translateY(10px) rotate3d(9.68deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);
+    }
 }

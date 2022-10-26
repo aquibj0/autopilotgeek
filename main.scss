@@ -128,6 +128,8 @@
             top: -35vh;
         }
 
+        @include bg-adjusted;
+
     }
 
     h1 {
@@ -211,24 +213,40 @@
             left: 150px;
             transform: rotate(-15.78deg);
             animation: float_1 3.5s ease-in-out infinite alternate;
+
+            @include respond(big-desktop) {
+                left: 370px;
+            }
         }
 
         &__2 {
             right: 150px;
             transform: rotate(24.79deg);
             animation: float_2 4s ease-in-out infinite alternate;
+
+            @include respond(big-desktop) {
+                right: 370px;
+            }
         }
 
         &__3 {
             left: 100px;
             transform: rotate(-9.68deg);
             animation: float_3 4.5s ease-in-out infinite alternate;
+
+            @include respond(big-desktop) {
+                left: 320px;
+            }
         }
 
         &__4 {
             right: 100px;
             transform: rotate(9.68deg);
             animation: float_4 5s ease-in-out infinite alternate;
+
+            @include respond(big-desktop) {
+                right: 320px;
+            }
         }
     }
 
@@ -319,6 +337,8 @@
         @include respond(standardphone) {
             top: 385vh;
         }
+
+        @include bg-adjusted;
 
         img {
             width: 100%;
@@ -439,6 +459,8 @@
         @include respond(standardphone) {
             top: 850vh;
         }
+
+        @include bg-adjusted;
     }
 
     img {
@@ -501,8 +523,10 @@
         transform: scale(0.6);
 
         @include respond(standardphone) {
-            display: none;
+            display: none !important;
         }
+
+        @include bg-adjusted;
     }
 
     .main-resons-card {
@@ -560,6 +584,8 @@
         @include respond(standardphone) {
             top: 1110vh;
         }
+
+        @include bg-adjusted;
     }
 
     .owl-carousel .owl-nav button.owl-next,
@@ -721,6 +747,8 @@
         @include respond(standardphone) {
             top: 1256vh;
         }
+
+        @include bg-adjusted;
     }
 
     .primary-bg {
