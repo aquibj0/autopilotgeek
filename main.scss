@@ -759,6 +759,16 @@
         }
     }
 
+    &-details {
+        margin-left: 10px;
+
+        p {
+            @include respond(standardphone) {
+                font-size: 14.5px;
+            }
+        }
+    }
+
     .section-heading {
         text-align: left;
 
@@ -775,6 +785,19 @@
         width: 65px;
         display: grid;
         place-content: center;
+
+        @include respond(standardphone) {
+            height: 60px;
+            width: 60px;
+            border-radius: 8px;
+        }
+
+        img {
+            @include respond(standardphone) {
+                height: 32px;
+                width: 32px;
+            }
+        }
     }
 }
 
@@ -835,6 +858,12 @@
         /* Microsoft Edge */
         color: #404A5C;
         font-size: 18px;
+    }
+
+    .margin-btm__mobile {
+        @include respond(standardphone) {
+            margin-bottom: 1.5rem !important;
+        }
     }
 }
 
