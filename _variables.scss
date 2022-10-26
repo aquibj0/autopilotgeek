@@ -1,8 +1,77 @@
+// Mixins
+
 @mixin center__both {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@mixin card-style {
+    background: $glass-bg;
+    box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border-radius: 18px;
+    border: none !important;
+}
+
+@mixin cta-btn {
+    background: $gradient-cta;
+    border-radius: 52px;
+    font-weight: 500;
+    font-size: 18px;
+    padding: .8rem 0;
+    color: $color-primary;
+
+    &:hover {
+        color: $color-primary;
+        box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+    }
+}
+
+@mixin bg-blur {
+    position: relative;
+    z-index: 3;
+
+    @include respond(standardphone) {
+        z-index: 99;
+    }
+}
+
+@mixin bg-set {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// ======== mixins for flex row
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row_center {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+}
+
+// ======== for flex column
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column_center {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
 }
 
 // MEDIA QUERY MANAGER
@@ -28,7 +97,7 @@ $breakpoint arguement choices :
 */
 
 @mixin respond($breakpoint) {
-    @if $breakpoint ==sm-phone {
+    @if $breakpoint==sm-phone {
         @media only screen and (max-width: 375px) {
             @content;
         }
@@ -36,7 +105,7 @@ $breakpoint arguement choices :
         //  21.5em;
     }
 
-    @if $breakpoint ==phone {
+    @if $breakpoint==phone {
         @media only screen and (max-width: 600px) {
             @content;
         }
@@ -44,7 +113,7 @@ $breakpoint arguement choices :
         // 37.5em;
     }
 
-    @if $breakpoint ==standardphone {
+    @if $breakpoint==standardphone {
         @media only screen and (max-width: 768px) {
             @content;
         }
@@ -52,7 +121,7 @@ $breakpoint arguement choices :
         // 37.5em;
     }
 
-    @if $breakpoint ==tab-port {
+    @if $breakpoint==tab-port {
         @media only screen and (max-width: 900px) {
             @content;
         }
@@ -60,7 +129,7 @@ $breakpoint arguement choices :
         // 56.25em;
     }
 
-    @if $breakpoint ==tab-land {
+    @if $breakpoint==tab-land {
         @media only screen and (max-width: 1200px) {
             @content;
         }
@@ -68,7 +137,7 @@ $breakpoint arguement choices :
         // 75em;
     }
 
-    @if $breakpoint ==big-desktop {
+    @if $breakpoint==big-desktop {
         @media only screen and (min-width: 1800px) {
             @content;
         }
@@ -76,7 +145,7 @@ $breakpoint arguement choices :
         // 112.5em;
     }
 
-    @if $breakpoint ==very-big {
+    @if $breakpoint==very-big {
         @media only screen and (min-width: 2400px) {
             @content;
         }
@@ -98,9 +167,13 @@ $color-secondary: #747D8C;
 $color-secondary-light:#C3CDE0;
 $color-light:#909AAD;
 
+// Gradient
+$gradient-cta: linear-gradient(93.67deg, #357DFF 2.43%, #0244BA 100%);
+$glass-bg: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
+$gradient-secondary: linear-gradient(90.07deg, #B3F1FF 16.05%, #E1FFBB 84.11%);
+
 // Background
 $bg-primary-color: #010B1C;
-$bg-primary-gradient: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
 $border-radius: 18px;
 
 /* ============================================ */
@@ -121,8 +194,16 @@ $border-radius: 18px;
 
 body {
     box-sizing: border-box;
-    background:$bg-primary-color;
+    background: url('/images/bg_web.jpg'), $bg-primary-color;
+    background-position: center;
+    background-repeat: repeat;
     color: $color-primary;
+    // overflow-x: hidden;
+
+    @include respond(standardphone) {
+        background: url('/images/bg_mobile.jpg'), $bg-primary-color;
+    }
+
     a {
         text-decoration: none;
         color: unset;
@@ -133,13 +214,19 @@ body {
         outline: none;
     }
 }
-html, body{
+
+html,
+body {
     font-family: 'Euclid Circular A', sans-serif;
     font-size: 16px;
 }
 
+section {
+    margin: 90px 0;
+}
+
 .text-gradient {
-    background: linear-gradient(90.07deg, #B3F1FF 16.05%, #E1FFBB 84.11%);
+    background: $gradient-secondary;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -153,26 +240,55 @@ html, body{
     line-height: 63px;
     text-align: center;
     color: #FFFFFF;
+    padding-bottom: 50px;
+
     @include respond(standardphone) {
         font-size: 42px;
+        padding-bottom: 40px;
     }
 }
 
 .text-basic {
     color: $color-secondary;
 }
-.text-basic-light{
+
+.text-basic-light {
     color: $color-secondary-light;
 }
-.text-light{
+
+.text-light {
     color: $color-light !important;
 }
+
 .primary-bg {
     background: rgba(1, 7, 18, 0.59);
     backdrop-filter: blur(16.5px);
     border-radius: 30px;
 }
-a{
+
+a {
     font-weight: 500;
-    
+
+}
+
+// Animation Floating
+
+@keyframes float_1 {
+  0%   {transform: translateY(10px) rotate3d(-15.78deg);}
+  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
+}
+
+@keyframes float_2 {
+  0%   {transform: translateY(10px) rotate3d(24.79deg);}
+  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
+}
+
+@keyframes float_3 {
+  0%   {transform: translateY(10px) rotate3d(-9.68deg);}
+  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
+}
+
+@keyframes float_4 {
+  0%   {transform: translateY(10px) rotate3d(9.68deg);}
+  100% {transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);}
 }
