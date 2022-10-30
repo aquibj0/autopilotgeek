@@ -921,7 +921,15 @@
 
                         </div>
                         <div class="col-md-6">
-                            <form action="/mail.php" method="post">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="f4e1fcd9-b591-4d63-9fdb-8fbb954c8bc3">
+                                
+                                <input type="hidden" name="subject" value="New Contact Submission For AutopilotGeek">
+
+                                <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+                                <input type="hidden" name="from_name" value="AutopilotGeek Notification">
+                                    
                                 <div class="form-group mb-4 row">
                                     <div class="col-md-6 margin-btm__mobile">
                                         <label for="full_name">Full Name</label>
