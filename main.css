@@ -959,6 +959,9 @@ a {
     display: block;
   }
 }
+.main-testimonial .owl-carousel .owl-item img {
+  cursor: pointer;
+}
 .main-testimonial .owl-carousel .owl-nav button.owl-next,
 .main-testimonial .owl-carousel .owl-nav button.owl-prev {
   width: 42px;
@@ -1282,10 +1285,17 @@ a {
 }
 
 footer {
+  position: relative;
+  z-index: 3;
   background: url("/images/BG-Blur/web/footer_bg_blur.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    z-index: 99;
+  }
 }
 @media only screen and (max-width: 768px) {
   footer {

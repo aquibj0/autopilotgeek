@@ -592,6 +592,10 @@
         @include bg-adjusted;
     }
 
+    .owl-carousel .owl-item img {
+        cursor: pointer;
+    }
+
     .owl-carousel .owl-nav button.owl-next,
     .owl-carousel .owl-nav button.owl-prev {
         width: 42px;
@@ -900,6 +904,9 @@
 }
 
 footer {
+
+    @include bg-blur;
+
     background: url('/images/BG-Blur/web/footer_bg_blur.png');
     background-position: center;
     background-size: cover;
