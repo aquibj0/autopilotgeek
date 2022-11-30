@@ -937,6 +937,32 @@ footer {
             margin: auto .75rem;
             font-size: 1.5rem;
             color: #747D8C;
+            transition: all .3s;
+
+            &:hover {
+                color: #fff;
+            }
+
+            .icon-box {
+                margin-right: 10px;
+
+                &:hover {
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+
+                    path {
+                        transition: all .3s;
+                    }
+                }
+            }
         }
     }
 

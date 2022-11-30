@@ -1323,6 +1323,23 @@ footer .social-icons a {
   margin: auto 0.75rem;
   font-size: 1.5rem;
   color: #747D8C;
+  transition: all 0.3s;
+}
+footer .social-icons a:hover {
+  color: #fff;
+}
+footer .social-icons a .icon-box {
+  margin-right: 10px;
+}
+footer .social-icons a .icon-box:hover svg path {
+  fill: #fff;
+}
+footer .social-icons a .icon-box svg {
+  width: 2rem;
+  height: 2rem;
+}
+footer .social-icons a .icon-box svg path {
+  transition: all 0.3s;
 }
 footer .bottom {
   background: rgba(1, 7, 18, 0.59);
