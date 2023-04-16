@@ -54,6 +54,13 @@ p{
         line-height: 180.02%;
         font-size: 20px;
     }
+    .main-header-cta-upwork-banner{
+        p{
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
     .toprated{
         width: 10%;
     }
@@ -150,10 +157,13 @@ p{
 }
 .our-mission{
     z-index: 3;
+    p{
+        line-height: 167.02%;
+    }
     .sub-heading{
         font-weight: 500;
-        font-size: 26px;
-        line-height: 167.02%;
+        font-size: 22px;
+        line-height: 160.02%;
         color: #C3CDE0;
     }
     // &::after {
@@ -172,13 +182,15 @@ p{
 }
 .team {
     .card {
+        margin-bottom: 32px;
         h3{
             font-weight: 600;
-            font-size: 24px;
-            line-height: 30px;
+            font-size: 19px;
         }
         P{
-            line-height: 137.3%;
+            line-height: 130.3%;
+            color: #747D8C;
+            font-size: 16px;
         }
     }
 }
@@ -285,6 +297,7 @@ p{
         font-size: 18px;
         line-height: 29px;
         font-family: 'Kalam', cursive;
+        animation: bounce 1s infinite;
         img{
             width: 20px;
         }
@@ -294,6 +307,17 @@ p{
         box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
         backdrop-filter: blur(21px);
         border-radius: 18px;
+    }
+}
+@keyframes bounce {
+    0%,to {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,.2,1)
     }
 }
 .single-services{
@@ -341,7 +365,7 @@ p{
                     margin-top: 30px;
                 }
                 &:not(:last-child):after{
-                    content: url(./images/services/process-after.png);
+                    content: url(./images/services/process-after.svg);
                     position: absolute;
                     top: 18px;
                     right: -2.35rem;
@@ -350,24 +374,9 @@ p{
         }
     }
 }
-.why-choose{
+.main-reasons-chose{
     .card{
-        padding: 28px 30px;
-        background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
-        box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(21px);
-        border-radius: 18px;
-        .card-img{
-            background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1116) 0%, rgba(255, 255, 255, 0) 100%);
-            box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(21px);
-            border-radius: 8px;
-            width: 55px;
-            height: 55px;
-            padding: .65rem;
-            flex: 0 0 auto;
-        }
-        h3{
+        h4{
             font-weight: 600;
             font-size: 18px;
             line-height: 23px;
@@ -377,31 +386,6 @@ p{
             font-weight: 400;
             font-size: 15px;
             line-height: 162.52%;
-        }
-        h5{
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 20px;
-        }
-    }
-    .primary-bg{
-        .card{
-            background: #131C2B;
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            .img-clock{
-                width: 40px;
-            }
-        }
-        h3{
-            background: linear-gradient(90.07deg, #B3F1FF 16.05%, #E1FFBB 84.11%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            font-weight: 600;
-            font-size: 31.0803px;
-            line-height: 144.02%;
         }
     }
 }
