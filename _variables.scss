@@ -152,6 +152,22 @@ $breakpoint arguement choices :
         // 75em;
     }
 
+    @if $breakpoint==mid-desktop {
+        @media only screen and (max-width: 1399px) {
+            @content;
+        }
+
+        // 75em;
+    }
+
+    @if $breakpoint==large-desktop {
+        @media only screen and (min-width: 1600px) {
+            @content;
+        }
+
+        // 75em;
+    }
+
     @if $breakpoint==big-desktop {
         @media only screen and (min-width: 1800px) {
             @content;
@@ -209,7 +225,7 @@ $border-radius: 18px;
 
 body {
     box-sizing: border-box;
-    background: url('/images/bg_web.jpg'), $bg-primary-color;
+    background: url('./images/bg_web.jpg'), $bg-primary-color;
     background-position: center;
     background-repeat: repeat;
     color: $color-primary;
@@ -285,7 +301,43 @@ a {
     font-weight: 500;
 
 }
-
+.btn {
+    background: $gradient-cta;
+    border-radius: 52px;
+    color: $color-primary;
+    color: $color-primary !important;
+    box-shadow: 0px 2px 14px rgba(79, 137, 243, 0.41);
+    padding: .75rem 1.5rem;
+    border: 0px;
+    &.btn-dark{
+        background: #010A1C;
+        box-shadow: none;
+    }
+    @include respond(standardphone) {
+        display: block;
+        width: 100%;
+    }
+}
+.text-gradient-button{
+    background: $gradient-secondary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $gradient-secondary;
+        transition: all 0.3s;
+    }
+    &:hover::after {
+        width: 10px;
+    }
+}
 // Animation Floating
 
 @keyframes float_1 {

@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/euclid-circular-a');
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 @import "variables";
 @import "youtube-overlay";
 
@@ -122,7 +122,7 @@
         top: 0;
         left: 0;
         height: 950px;
-        background: url('/images/BG-Blur/web/banner_bg_blur.png');
+        background: url('./images/BG-Blur/web/banner_bg_blur.png');
 
         @include respond(standardphone) {
             top: -35vh;
@@ -332,8 +332,7 @@
         top: 140vh;
         left: 0;
         height: 1200px;
-        background: url('/images/BG-Blur/web/banner_bg_blur.png');
-
+        background: url('./images/BG-Blur/web/banner_bg_blur.png');
         @include respond(standardphone) {
             top: 385vh;
         }
@@ -458,7 +457,7 @@
         top: 600vh;
         left: 0;
         height: 850px;
-        background: url('/images/BG-Blur/web/we_work_with_bg_blur.png');
+        background: url('./images/BG-Blur/web/we_work_with_bg_blur.png');
 
         @include respond(standardphone) {
             top: 850vh;
@@ -523,7 +522,7 @@
         top: 650vh;
         right: -100px;
         height: 972px;
-        background: url('/images/BG-Blur/web/why_choose_bg_blur.png');
+        background: url('./images/BG-Blur/web/why_choose_bg_blur.png');
         transform: scale(0.6);
 
         @include respond(standardphone) {
@@ -583,7 +582,7 @@
         top: 740vh;
         left: 0;
         height: 1230px;
-        background: url('/images/BG-Blur/web/testimonial_bg_blur.png');
+        background: url('./images/BG-Blur/web/testimonial_bg_blur.png');
 
         @include respond(standardphone) {
             top: 1110vh;
@@ -750,7 +749,7 @@
         top: 925vh;
         left: 0;
         height: 1230px;
-        background: url('/images/BG-Blur/web/quote_bg_blur.png');
+        background: url('./images/BG-Blur/web/quote_bg_blur.png');
 
         @include respond(standardphone) {
             top: 1256vh;
@@ -907,13 +906,13 @@ footer {
 
     @include bg-blur;
 
-    background: url('/images/BG-Blur/web/footer_bg_blur.png');
+    background: url('./images/BG-Blur/web/footer_bg_blur.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     @include respond(standardphone) {
-        background: url('/images/BG-Blur/Mobile/Vector-11.png');
+        background: url('./images/BG-Blur/Mobile/Vector-11.png');
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
@@ -969,6 +968,13 @@ footer {
     .bottom {
         background: rgba(1, 7, 18, 0.59);
         backdrop-filter: blur(16.5px);
+        padding: 20px 0;
+        p{
+            color: #404A5C;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     .nav-icons {
